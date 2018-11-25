@@ -1,0 +1,37 @@
+body  {
+    	background-image: url("buyerbg.png");
+    	}
+  		.result_container>.row>div:nth-child(2)>.result>ul>li
+  		{
+  			margin-top: 2%;
+  			color: white;
+  			background-color: #000000;
+  		}
+  		.result_container>.row>div:nth-child(2)>.result>ul>li>span
+  		{
+  			margin-left: 5%;
+  		}
+  		.result_container>.row>div:nth-child(2)>.result>ul>li>button
+  		{
+  			float: right;
+  			background-color: #5c85d6;
+  		}
+  		h4{
+
+  		}
+  		h5{
+
+  		}
+  		#shop
+  		{
+  			padding-top: 20px;
+  			color:white;
+  			font-size: 20px;
+  			padding: 5px 10px;
+  			margin:-2px 0;
+  			border: none;
+  			cursor:pointer;
+  			width: 50%;
+  			border-radius: 12px;
+  			background-color: green;
+  		}
