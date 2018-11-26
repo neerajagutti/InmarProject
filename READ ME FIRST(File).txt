@@ -1,0 +1,96 @@
+
+////////////////////////////--------------------------------------------------------------------------FRUITS ADDA---------------------------------------------------------------------------------///////////////////////////
+
+INTRODUCTION:
+
+//This application gives you the detailed explanation on how to purchase the fruits and make a market by entering details of a seller and purchaser.
+The seller login into the system to sell their fruits and customer will be able to purchase them.
+
+PREREQUISITES or SOFTWARES:
+
+ 			* * * * * * * * * * * * * * *  * *  XAMPP INSTALLATION * * * * * * * * * * *  * * *
+
+-> First install the XAMPP using the link
+		https://www.apachefriends.org/index.html
+
+-> And set the location of xampp folder on the desktop.
+
+-> Click Yes when prompted. This will open the XAMPP setup window.
+-> You may have to click OK on a warning if you have User Account Control (UAC) activated on your computer.
+-> Click Next. It's at the bottom of the setup window.
+-> By default, all attributes are included in your XAMPP installation.
+-> Click Next. You'll find it at the bottom of the page.
+-> Uncheck the "Learn more about Bitnami" box, then click Next. The "Learn more about Bitnami" box is in the middle of     the page.
+-> Click Finish when prompted.
+-> Click Save. Doing so opens the main Control Panel page.
+-> Start XAMPP from its installation point.
+-> Install the MySQL, Apache in XAMPP control panel.
+
+
+                       	  		* * * * * * * * * * * * * * * * EDITOR * * * * * * * * * * * * * * * * * * * * *
+
+-> Download Sublime from the link given below and install it.
+			https://www.sublimetext.com/
+
+                        			 * * * * * * * * * * * * * * * DATABASE CREATION * * * * * * * * * * * * * * * 
+
+-> Type the URL localhost/phpMyadmin in the Browser.
+
+	Database login name: 	root
+	//     There is no password for these database xampp server.
+-> Create the new database name "freshfruitadda" in the XAMPP server.
+-> Import freshfruitadda.sql file from the downloaded folder named fruitadda.(All tables will automatically created in that database named freshfruitadda.sql)
+
+				* * * * * * * * * * * * * * * * * * * PROCEDURE* * * * * * * * * * * * * * * * * * 
+
+->Folders are dumped into xampp/htdocs with project folder (For Eg: ooo) //My Folder name 
+->Home page of the project is named as "mrg_theme.php".
+->Open googlechrome and run the server using xampp by giving url as 
+	For Eg;localhost/ooo/mrg_theme.php
+->mrg_theme.php is the home page of the project.
+
+                                                      	* * * * * * * * * * * * * * SELLER DETAILS * * * * * * * * * * * * * * * * * * * * * 
+->Seller signup into the system and  login into the system using link as login
+for eg;mrg_theme.php
+#seller can login by giving credentials regarding email and password.
+->After entering the details database checks email and password using file
+for eg: retailerloginpage.php
+->Retailer can see the dashboard by using link as below 
+for eg;jsontojquery.php
+-> Now retailer can add fruits in his store in order to sell.
+-> He can add many number of fruits in his store along with valid price and quantity per each fruit.
+-> Retailer cannot add same type of fruit into his store until the fruit quantity become unavailable.
+->Fruits are added by the seller using php file as
+for eg;add_fruit_information.php
+->Fruits information is reteived from the server using php file as
+for eg;get_fruit_information.php
+->Fruits are delted by the seller using file as
+for eg;delete_fruit_information.php
+->Fruits are updated using php file as
+for eg;update_fruit_information.php
+->Wallet money is initialized in the retailer page using php file
+for eg: getwalletmoneyretailer.php
+
+                            		 * * * * * * * * * * * * * * * * * * *CUSTOMER DETAILS * * * * * * * * * * * * * * * * * * * * * *  
+->Customer signup into the system and Customer login into the system using link as customer
+for eg: mrg_theme.php
+->After entering the details database checks email and password using file
+for eg;customerloginpage.php
+->customer can see the dashboard by using link as
+for eg;buyerdashboard.php
+-> Now customer can view the list of retailers in his dashboard page. ( buyerdashboard.php)
+-> Now customer can choose the retailer of his own choice from the list of retailers.
+->Wallet money is initialized in the retailer page using php file
+for eg: getwalletmoneycustomer.php
+
+
+				* * * * * * * * * * * * * * * * ** * * * * FOLDERS * * * * * * * * * * * *  * * *  * * *  * 
+->Styles for the project are given in css folder.
+->images regarding webpages are given in images folder.
+->javascripts for validations and jqueries are given in js folder.
+
+
+
+
+
+
