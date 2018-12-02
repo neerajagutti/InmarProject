@@ -1,11 +1,13 @@
 <?php
-session_start();
+	session_start();
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
 	$dbname = "freshfruitsadda";
 	$temp_quantity=0;
 	$temp_fruitname="";
+	$tempquan="";
+	$tempprice="";
 	$useremail=$_SESSION['useremail'];
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -27,6 +29,7 @@ session_start();
 	$custwallet1='';
 	$sql="SELECT cwallet from customerregistration where useremail='$useremail'";
 		$result1= $conn->query($sql);
+
 		if ($result1->num_rows > 0) 
 		{
 		    // output data of each row
@@ -83,11 +86,15 @@ session_start();
 		//echo $jsondata[$i]->fprice."  ";
 		//echo "\n";
 		$temp_fruitname=$jsondata[$i]->fname;
+		$tempquan = $jsondata[$i]->fquantity;
+		$tempprice = $jsondata[$i]->fprice;
 		$sql_select = "SELECT quantity FROM fruit_store where seller_email='$seller_email' and fruit_name='$temp_fruitname'";
 
 		$result = $conn->query($sql_select);
-        
-		if ($result->num_rows > 0) 
+		$sq = "INSERT INTO purchasetable values('$seller_email','$buyer_email','$temp_fruitname','$tempquan','$tempprice','$custwallet','$custwallet1',now())";
+	     $res = $conn->query($sq);
+
+        if ($result->num_rows > 0) 
 		{
 		    // output data of each row
 		    while($row = $result->fetch_assoc())
@@ -99,7 +106,7 @@ session_start();
 		    $sql_update="UPDATE fruit_store SET quantity=$temp_quantity WHERE seller_email='$seller_email' and fruit_name='$temp_fruitname'";
 		    if($conn->query($sql_update)===TRUE)
 		    {
-
+		    	
 		    }	
 		    else
 		    {
